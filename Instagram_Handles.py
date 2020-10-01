@@ -5,6 +5,8 @@ from time import sleep, strftime
 import pandas as pd
 from selenium import webdriver
 
+username = input("Username: ")
+password = input("Password: ")
 
 def open_pages(user):
     webbrowser.open_new_tab("instagram.com/" + user)
@@ -19,9 +21,9 @@ sleep(2)
 
 # enter details
 username = webdriver.find_element_by_name('username')
-username.send_keys('dan_guy_comics')
+username.send_keys(username)
 password = webdriver.find_element_by_name('password')
-password.send_keys('navsmipiyary2@!71605')
+password.send_keys(password)
 
 # click login
 login_button = webdriver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[4]/button/div')
